@@ -80,7 +80,7 @@ function Przewidywanie() {
         showToast();
       }
     });
-    axios.get(`https://apiv3.apifootball.com/?action=get_odds&from=${zformanowanaData}&to=${tydzienPo}&APIkey=cfc8b13e70e4defc71e6a45392f8b82af31fad20c05606eb080c9ff2502ce9c8`).then((res) => {
+    axios.get(`https://apiv3.apifootball.com/?action=get_odds&from=${zformanowanaData}&to=${tydzienPo}&APIkey=token`).then((res) => {
       if(res.data)
       {
         const filtr = res.data.filter((item: typyDanych) => item.odd_bookmakers === "bwin");
